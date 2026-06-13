@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAsyncProgressTest", "WpfAsyncProgressTest\WpfAsyncProgressTest.csproj", "{FC307CB8-6B1A-430A-A5DE-7BD2CE860BB9}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {FC307CB8-6B1A-430A-A5DE-7BD2CE860BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {FC307CB8-6B1A-430A-A5DE-7BD2CE860BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {FC307CB8-6B1A-430A-A5DE-7BD2CE860BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {FC307CB8-6B1A-430A-A5DE-7BD2CE860BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+    GlobalSection(ExtensibilityGlobals) = postSolution
+        SolutionGuid = {931EA796-3B3B-4CB5-B891-AC403E868E17}
+    EndGlobalSection
+EndGlobal
