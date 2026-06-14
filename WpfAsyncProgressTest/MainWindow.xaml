@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAsyncProgressTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="240" Width="800">
     <Grid>
-
+        <StackPanel Orientation="Vertical">
+            <Button Content="Run" Width="128" Height="64" Margin="8,8,8,8" />
+            <ProgressBar Width="400" Height="32" Minimum="0" Maximum="100" Value="50" Margin="8,8,8,8" />
+        </StackPanel>
     </Grid>
 </Window>
