@@ -20,5 +20,17 @@ namespace WpfAsyncProgressTest
         {
             InitializeComponent();
         }
+
+        public int HeavyTask()
+        {
+            int total = 0;
+            for ( int i = 1; i <= 20; ++ i ) {
+                total += i;
+                Thread.Sleep(1000);
+            }
+            return ( total );
+        }
+
     }
+
 }
