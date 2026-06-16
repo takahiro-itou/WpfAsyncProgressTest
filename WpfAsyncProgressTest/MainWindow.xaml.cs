@@ -17,9 +17,16 @@ namespace WpfAsyncProgressTest
     /// </summary>
     public partial class MainWindow : Window
     {
+        IProgress<int>  progress;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void ProgressChanged(int progressValue)
+        {
+            this.MyProgress.Value = progressValue;
         }
 
         public int HeavyTask()
