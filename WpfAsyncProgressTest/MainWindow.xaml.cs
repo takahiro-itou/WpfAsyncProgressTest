@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -29,6 +30,13 @@ namespace WpfAsyncProgressTest
                 Thread.Sleep(1000);
             }
             return ( total );
+        }
+
+        private async void OnButtonClickAsync(object sender, RoutedEventArgs e)
+        {
+            Task<int> task = Task.Run<int>(new Func<int>(HeavyTask));
+            int result = await task;
+            this.ResultText.Text = $"{result}";
         }
 
     }
