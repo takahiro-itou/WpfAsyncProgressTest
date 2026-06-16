@@ -22,6 +22,7 @@ namespace WpfAsyncProgressTest
         public MainWindow()
         {
             InitializeComponent();
+            this.progress = new Progress<int>(ProgressChanged);
         }
 
         public void ProgressChanged(int progressValue)
