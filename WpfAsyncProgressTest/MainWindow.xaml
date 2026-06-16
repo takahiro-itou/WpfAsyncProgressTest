@@ -10,7 +10,10 @@
         <StackPanel Orientation="Vertical">
             <Button Content="Run" Width="128" Height="64" Margin="8,8,8,8"
                 Click="OnButtonClickAsync" />
-            <ProgressBar Width="400" Height="32" Minimum="0" Maximum="100" Value="50" Margin="8,8,8,8" />
+            <ProgressBar x:Name="MyProgress"
+                Width="400" Height="32" Margin="8,8,8,8"
+                Minimum="0" Maximum="100" Value="50"
+            />
             <TextBlock x:Name="ResultText" />
         </StackPanel>
     </Grid>
