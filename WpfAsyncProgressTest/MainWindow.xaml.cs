@@ -17,17 +17,28 @@ namespace WpfAsyncProgressTest
     /// </summary>
     public partial class MainWindow : Window
     {
+        IProgress<int>  progress;
+
         public MainWindow()
         {
             InitializeComponent();
+            this.progress = new Progress<int>(ProgressChanged);
+        }
+
+        public void ProgressChanged(int progressValue)
+        {
+            this.MyProgress.Value = progressValue;
         }
 
         public int HeavyTask()
         {
             int total = 0;
+
+            progress.Report(0);
             for ( int i = 1; i <= 20; ++ i ) {
                 total += i;
                 Thread.Sleep(1000);
+                progress.Report(i * 5);
             }
             return ( total );
         }
