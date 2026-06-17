@@ -6,7 +6,19 @@
         xmlns:local="clr-namespace:WpfAsyncProgressTest"
         mc:Ignorable="d"
         Title="MainWindow" Height="240" Width="800">
-    <Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Menu1(_A)">
+                <MenuItem Header="Menu 1-1" />
+                <MenuItem Header="Menu 1-2" />
+                <Separator />
+                <MenuItem Header="Menu 1-3">
+                    <MenuItem Header="Menu 1-3-1" />
+                    <MenuItem Header="Menu 1-3-2" />
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Menu2 (_B)" />
+        </Menu>
         <StackPanel Orientation="Vertical">
             <Button Content="Run" Width="128" Height="64" Margin="8,8,8,8"
                 Click="OnButtonClickAsync" />
@@ -16,5 +28,5 @@
             />
             <TextBlock x:Name="ResultText" />
         </StackPanel>
-    </Grid>
+    </DockPanel>
 </Window>
