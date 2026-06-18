@@ -5,6 +5,7 @@ namespace WpfAsyncProgressTest
 public class ProgressSampleViewModel
 {
     private readonly    IProgress<int>  m_progress;
+    private             int             m_progressValue = 0;
 
     public ProgressSampleViewModel()
     {
@@ -13,6 +14,7 @@ public class ProgressSampleViewModel
 
     public void ProgressChanged(int progressValue)
     {
+        this.m_progressValue = progressValue;
     }
 
 }
