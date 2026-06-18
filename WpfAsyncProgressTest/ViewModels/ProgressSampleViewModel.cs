@@ -17,6 +17,12 @@ public class ProgressSampleViewModel
         this.m_progressValue = progressValue;
     }
 
+    public  int  ProgressValue
+    {
+        get { return  this.m_progressValue; }
+        set { this.m_progressValue = value; }
+    }
+
 }
 
 }
