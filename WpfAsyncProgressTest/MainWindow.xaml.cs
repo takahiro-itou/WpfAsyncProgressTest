@@ -17,7 +17,7 @@ namespace WpfAsyncProgressTest
     /// </summary>
     public partial class MainWindow : Window
     {
-        ProgressSampleViewModel     ViewModel;
+        readonly ProgressSampleViewModel     ViewModel;
 
         public MainWindow()
         {
