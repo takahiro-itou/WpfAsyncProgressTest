@@ -18,10 +18,12 @@ namespace WpfAsyncProgressTest
     public partial class MainWindow : Window
     {
         IProgress<int>  progress;
+        ProgressSampleViewModel     ViewModel;
 
         public MainWindow()
         {
             InitializeComponent();
+            this.ViewModel = new ProgressSampleViewModel();
             this.progress = new Progress<int>(ProgressChanged);
         }
 

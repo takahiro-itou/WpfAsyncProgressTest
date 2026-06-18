@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Input;
+
 namespace WpfAsyncProgressTest
 {
 
