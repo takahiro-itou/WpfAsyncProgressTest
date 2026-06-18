@@ -17,14 +17,12 @@ namespace WpfAsyncProgressTest
     /// </summary>
     public partial class MainWindow : Window
     {
-        IProgress<int>  progress;
         ProgressSampleViewModel     ViewModel;
 
         public MainWindow()
         {
             InitializeComponent();
             this.ViewModel = new ProgressSampleViewModel();
-            this.progress = new Progress<int>(ProgressChanged);
         }
 
         public void ProgressChanged(int progressValue)
@@ -36,18 +34,18 @@ namespace WpfAsyncProgressTest
         {
             int total = 0;
 
-            progress.Report(0);
+            //  progress.Report(0);
             for ( int i = 1; i <= 20; ++ i ) {
                 total += i;
                 Thread.Sleep(1000);
-                progress.Report(i * 5);
+                // progress.Report(i * 5);
             }
             return ( total );
         }
 
         private async void OnButtonClickAsync(object sender, RoutedEventArgs e)
         {
-            Task<int> task = Task.Run<int>(new Func<int>(HeavyTask));
+            Task<int> task = Task.Run<int>(new Func<int>(ViewModel.HeavyTask));
             int result = await task;
             this.ResultText.Text = $"{result}";
         }
