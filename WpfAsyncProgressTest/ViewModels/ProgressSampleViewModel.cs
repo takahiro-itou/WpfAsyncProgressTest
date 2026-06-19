@@ -9,7 +9,7 @@ namespace WpfAsyncProgressTest
 public class ProgressSampleViewModel : INotifyPropertyChanged
 {
     private readonly    IProgress<int>  m_progress;
-    private             int             m_progressValue = 50;
+    private             int             m_progressValue = 0;
 
     public ProgressSampleViewModel()
     {
