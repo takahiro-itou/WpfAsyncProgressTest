@@ -26,11 +26,6 @@ namespace WpfAsyncProgressTest
             this.DataContext = this.ViewModel;
         }
 
-        public void ProgressChanged(int progressValue)
-        {
-            this.MyProgress.Value = progressValue;
-        }
-
         private async void OnButtonClickAsync(object sender, RoutedEventArgs e)
         {
             Task<int> task = Task.Run<int>(new Func<int>(ViewModel.HeavyTask));
