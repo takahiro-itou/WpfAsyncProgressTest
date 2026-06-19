@@ -31,19 +31,6 @@ namespace WpfAsyncProgressTest
             this.MyProgress.Value = progressValue;
         }
 
-        public int HeavyTask()
-        {
-            int total = 0;
-
-            //  progress.Report(0);
-            for ( int i = 1; i <= 20; ++ i ) {
-                total += i;
-                Thread.Sleep(1000);
-                // progress.Report(i * 5);
-            }
-            return ( total );
-        }
-
         private async void OnButtonClickAsync(object sender, RoutedEventArgs e)
         {
             Task<int> task = Task.Run<int>(new Func<int>(ViewModel.HeavyTask));
