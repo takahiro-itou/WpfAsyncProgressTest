@@ -25,7 +25,7 @@
             <ProgressBar x:Name="MyProgress"
                 Width="400" Height="32" Margin="8,8,8,8"
                 Minimum="0" Maximum="100"
-                Value="{Binding ViewModel.ProgressValue, Mode=OneWay}"
+                Value="{Binding ProgressValue, Mode=OneWay}"
             />
             <TextBlock x:Name="ResultText" />
         </StackPanel>

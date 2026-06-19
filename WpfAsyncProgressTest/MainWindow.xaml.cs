@@ -23,6 +23,7 @@ namespace WpfAsyncProgressTest
         {
             InitializeComponent();
             this.ViewModel = new ProgressSampleViewModel();
+            this.DataContext = this.ViewModel;
         }
 
         public void ProgressChanged(int progressValue)
