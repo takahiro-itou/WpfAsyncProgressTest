@@ -17,18 +17,18 @@ namespace WpfAsyncProgressTest
     /// </summary>
     public partial class MainWindow : Window
     {
-        readonly ProgressSampleViewModel     ViewModel;
+        readonly ProgressSampleViewModel     m_viewModel;
 
         public MainWindow()
         {
             InitializeComponent();
-            this.ViewModel = new ProgressSampleViewModel();
-            this.DataContext = this.ViewModel;
+            this.m_viewModel = new ProgressSampleViewModel();
+            this.DataContext = this.m_viewModel;
         }
 
         private async void OnButtonClickAsync(object sender, RoutedEventArgs e)
         {
-            Task<int> task = Task.Run<int>(new Func<int>(ViewModel.HeavyTask));
+            Task<int> task = Task.Run<int>(new Func<int>(m_viewModel.HeavyTask));
             int result = await task;
             this.ResultText.Text = $"{result}";
         }
