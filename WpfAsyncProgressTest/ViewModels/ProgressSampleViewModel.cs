@@ -3,6 +3,9 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
+using WpfAsyncProgressTest.Commands;
+using WpfAsyncProgressTest.Models;
+
 namespace WpfAsyncProgressTest
 {
 
