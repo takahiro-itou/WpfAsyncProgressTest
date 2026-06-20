@@ -22,7 +22,7 @@ public class ProgressSampleViewModel : INotifyPropertyChanged
     {
         this.m_progress = new Progress<int>(ProgressChanged);
 
-        this.m_model    = new HeavyTaskModel();
+        this.m_model    = new HeavyTaskModel(this.m_progress);
         this.m_heavyCommand = new SimpleCommand(_ => HeavyTask());
     }
 
