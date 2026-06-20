@@ -27,7 +27,9 @@
                 Minimum="0" Maximum="100"
                 Value="{Binding ProgressValue, Mode=OneWay}"
             />
-            <TextBlock x:Name="ResultText" />
+            <TextBlock x:Name="ResultText" Text="{Binding ResultValue}"
+                Width="128" Height="64" Margin="8,8,8,8"
+            />
         </StackPanel>
     </DockPanel>
 </Window>
