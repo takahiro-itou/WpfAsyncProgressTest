@@ -6,11 +6,14 @@ public class HeavyTaskModel
 {
     private  readonly   IProgress<int>  m_progress;
 
+    private  int        m_curVal;
+
     public
     HeavyTaskModel(
         IProgress<int>  progress)
     {
         this.m_progress = progress;
+        this.m_curVal   = 0;
     }
 
     public  int
@@ -22,10 +25,18 @@ public class HeavyTaskModel
         for ( int i = 1; i <= 20; ++ i ) {
             total += i;
             Thread.Sleep(1000);
+            this.m_curVal = total;
             this.m_progress.Report(i * 5);
         }
 
         return ( total );
+    }
+
+    public  int
+    CurrentValue {
+        get {
+            return  this.m_curVal;
+       }
     }
 
 }

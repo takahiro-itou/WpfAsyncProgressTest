@@ -31,6 +31,7 @@ public class ProgressSampleViewModel : INotifyPropertyChanged
     public void ProgressChanged(int progressValue)
     {
         this.ProgressValue = progressValue;
+        this.ResultValue   = this.m_model.CurrentValue;
     }
 
     public  int  ProgressValue
