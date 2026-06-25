@@ -7,6 +7,7 @@ public class HeavyTaskModel
     private  readonly   IProgress<int>  m_progress;
 
     private  int        m_curVal;
+    private  bool       m_paused;
 
     public
     HeavyTaskModel(
