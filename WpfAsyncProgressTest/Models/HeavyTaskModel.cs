@@ -7,6 +7,7 @@ public class HeavyTaskModel
     private  readonly   IProgress<int>  m_progress;
 
     private  int        m_curVal;
+    private  bool       m_paused;
 
     public
     HeavyTaskModel(
@@ -23,6 +24,10 @@ public class HeavyTaskModel
 
         this.m_progress.Report(1);
         for ( int i = 1; i <= 20; ++ i ) {
+            while ( this.m_paused ) {
+                Thread.Sleep(500);
+            }
+
             total += i;
             Thread.Sleep(1000);
             this.m_curVal = total;
@@ -37,6 +42,16 @@ public class HeavyTaskModel
         get {
             return  this.m_curVal;
        }
+    }
+
+    public  bool
+    IsPaused {
+        get {
+            return  this.m_paused;
+        }
+        set {
+            this.m_paused = value;
+        }
     }
 
 }
