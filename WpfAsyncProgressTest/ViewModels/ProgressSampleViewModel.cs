@@ -63,6 +63,12 @@ public class ProgressSampleViewModel : INotifyPropertyChanged
         this.ResultValue = result;
     }
 
+    public  void  PauseTask()
+    {
+        bool paused = this.m_model.IsPaused;
+        this.m_model.IsPaused = ! paused;
+    }
+
     public event PropertyChangedEventHandler? PropertyChanged;
 
     protected void OnPropertyChanged(
