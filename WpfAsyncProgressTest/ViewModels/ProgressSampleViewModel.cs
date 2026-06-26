@@ -13,6 +13,7 @@ public class ProgressSampleViewModel : INotifyPropertyChanged
 {
     private  readonly   IProgress<int>  m_progress;
     private  readonly   SimpleCommand   m_heavyCommand;
+    private  readonly   SimpleCommand   m_pauseCommand;
     private  readonly   HeavyTaskModel  m_model;
 
     private  int    m_progressValue = 0;
@@ -24,6 +25,7 @@ public class ProgressSampleViewModel : INotifyPropertyChanged
 
         this.m_model    = new HeavyTaskModel(this.m_progress);
         this.m_heavyCommand = new SimpleCommand(_ => HeavyTask());
+        this.m_pauseCommand = new SimpleCommand(_ => PauseTask());
     }
 
     public ICommand HeavyTaskCommand => m_heavyCommand;
