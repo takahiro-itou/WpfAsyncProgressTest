@@ -40,6 +40,16 @@ public class HeavyTaskModel
        }
     }
 
+    public  bool
+    IsPaused {
+        get {
+            return  this.m_paused;
+        }
+        set {
+            this.m_paused = value;
+        }
+    }
+
 }
 
 }
