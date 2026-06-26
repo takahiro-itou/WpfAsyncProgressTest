@@ -39,9 +39,14 @@
                 Width="400" Margin="8,8,8,8"
                 Text="{Binding ProgressValue}" />
             </Grid>
+            <StackPanel Orientation="Horizontal">
             <TextBlock x:Name="ResultText" Text="{Binding ResultValue}"
                 Width="128" Height="64" Margin="8,8,8,8"
             />
+                <TextBlock Text="{Binding IsPaused}"
+                    Width="128" Height="64" Margin="8,8,8,8"
+                />
+            </StackPanel>
         </StackPanel>
     </DockPanel>
 </Window>
