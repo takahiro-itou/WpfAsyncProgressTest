@@ -24,6 +24,10 @@ public class HeavyTaskModel
 
         this.m_progress.Report(1);
         for ( int i = 1; i <= 20; ++ i ) {
+            while ( this.m_paused ) {
+                Thread.Sleep(500);
+            }
+
             total += i;
             Thread.Sleep(1000);
             this.m_curVal = total;
