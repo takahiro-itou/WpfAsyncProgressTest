@@ -29,6 +29,7 @@ public class ProgressSampleViewModel : INotifyPropertyChanged
     }
 
     public ICommand HeavyTaskCommand => m_heavyCommand;
+    public ICommand PauseCommand => m_pauseCommand;
 
     public void ProgressChanged(int progressValue)
     {
