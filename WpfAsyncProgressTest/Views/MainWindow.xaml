@@ -30,18 +30,26 @@
                 />
             </StackPanel>
             <Grid>
-            <ProgressBar x:Name="MyProgress"
-                Width="400" Height="32" Margin="8,8,8,8"
-                Minimum="0" Maximum="100"
-                Value="{Binding ProgressValue, Mode=OneWay}"
-            />
-            <TextBlock
-                Width="400" Margin="8,8,8,8"
-                Text="{Binding ProgressValue}" />
+                <ProgressBar x:Name="MyProgress"
+                    Width="400" Height="32" Margin="8,8,8,8"
+                    Minimum="0" Maximum="100"
+                    Value="{Binding ProgressValue, Mode=OneWay}"
+                />
+                <TextBlock
+                    Width="400" Margin="8,8,8,8"
+                    Text="{Binding ProgressValue, StringFormat=' {0} %'}"
+                />
             </Grid>
-            <TextBlock x:Name="ResultText" Text="{Binding ResultValue}"
-                Width="128" Height="64" Margin="8,8,8,8"
-            />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="ResultText"
+                    Text="{Binding ResultValue, StringFormat='Current Value : {0}'}"
+                    Width="128" Height="64" Margin="8,8,8,8"
+                />
+                <TextBlock
+                    Text="{Binding IsPaused, StringFormat='IsPaused: {0}'}"
+                    Width="128" Height="64" Margin="8,8,8,8"
+                />
+            </StackPanel>
         </StackPanel>
     </DockPanel>
 </Window>

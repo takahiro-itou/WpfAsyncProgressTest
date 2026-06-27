@@ -58,6 +58,16 @@ public class ProgressSampleViewModel : INotifyPropertyChanged
         }
     }
 
+    public  bool  IsPaused {
+        get {
+            return  this.m_model.IsPaused;
+        }
+        set {
+            this.m_model.IsPaused = value;
+            OnPropertyChanged(nameof(IsPaused));
+        }
+    }
+
     public  async  void  HeavyTask()
     {
         Task<int> task = Task.Run<int>(new Func<int>(
@@ -69,7 +79,7 @@ public class ProgressSampleViewModel : INotifyPropertyChanged
     public  void  PauseTask()
     {
         bool paused = this.m_model.IsPaused;
-        this.m_model.IsPaused = ! paused;
+        this.IsPaused = ! paused;
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
